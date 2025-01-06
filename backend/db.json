@@ -1,0 +1,25 @@
+{
+  "menus": [
+    {
+      "id": "1",
+      "title": "Menu 1",
+      "image": "image1.jpg",
+      "description": "Description 1",
+      "mark": 1,
+      "approved": true,
+      "reservations": [
+        1,
+        1
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Menu 2",
+      "image": "image2.jpg",
+      "description": "Description 2",
+      "mark": 0,
+      "approved": true,
+      "reservations": []
+    }
+  ]
+}
