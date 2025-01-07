@@ -1,0 +1,7 @@
+<div class="div" *ngFor="let match of matches">
+    <h3>{{match.id}}</h3>
+    <h3>{{match.equipeA.nom}} {{match.score.equipeA}} vs {{match.equipeA.nom}}  {{match.score.equipeA}}</h3>
+    <h2 routerLink="/listmatchs/updatescore/{{match.id}}">Modifier score</h2>
+</div>
+
+

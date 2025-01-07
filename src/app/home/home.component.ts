@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Menu } from '../model/menu';
+
 
 @Component({
   selector: 'app-home',

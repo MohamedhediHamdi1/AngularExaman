@@ -1,25 +1,46 @@
 {
-  "menus": [
+  "equipes": [
     {
       "id": "1",
-      "title": "Menu 1",
-      "image": "image1.jpg",
-      "description": "Description 1",
-      "mark": 1,
-      "approved": true,
-      "reservations": [
-        1,
-        1
-      ]
+      "nom": "Equipe 1",
+      "natif": "Senior"
     },
     {
       "id": "2",
-      "title": "Menu 2",
-      "image": "image2.jpg",
-      "description": "Description 2",
-      "mark": 0,
-      "approved": true,
-      "reservations": []
+      "nom": "Equipe 2",
+      "natif": "Junior"
+    },
+    {
+      "id": "3",
+      "nom": "Equipe 3",
+      "natif": "Senior"
+    },
+    {
+      "id": "4",
+      "nom": "Equipe 4",
+      "natif": "Junior"
+    }
+  ],
+  "matches": [
+    {
+      "id": "1",
+      "date": "2025-01-09",
+      "heure": "10:15",
+      "lieu": "tunis",
+      "equipeA": {
+        "id": "1",
+        "nom": "Equipe 1",
+        "natif": "Senior"
+      },
+      "equipeB": {
+        "id": "1",
+        "nom": "Equipe 1",
+        "natif": "Senior"
+      },
+      "score": {
+        "equipeA": 0,
+        "equipeB": 0
+      }
     }
   ]
 }

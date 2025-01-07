@@ -9,6 +9,10 @@ import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { ListeEquipeComponent } from './liste-equipe/liste-equipe.component';
+import { ListeMatchsComponent } from './liste-matchs/liste-matchs.component';
+import { MatchComponent } from './match/match.component';
+import { UpdateScoreComponent } from './update-score/update-score.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +21,10 @@ import { HttpClientModule } from '@angular/common/http';
     FooterComponent,
     HomeComponent,
     NotFoundComponent,
+    ListeEquipeComponent,
+    ListeMatchsComponent,
+    MatchComponent,
+    UpdateScoreComponent,
   
     
   ],

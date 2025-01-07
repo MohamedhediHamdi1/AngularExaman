@@ -1,0 +1,69 @@
+<form #f="ngForm" (ngSubmit)="add()">
+    <div class="row">
+      <p>Date</p>
+      <input 
+        type="date" 
+        [(ngModel)]="date" 
+        name="date" 
+        #datee="ngModel" 
+        required>
+      <div *ngIf="datee.invalid && datee.touched">
+        <small *ngIf="datee.errors?.['required']">Le date est obligatoire.</small>
+      </div>
+    </div>
+  
+    <div class="row">
+      <p>Heure</p>
+      <input 
+        type="time" 
+        [(ngModel)]="time" 
+        name="time" 
+        #timee="ngModel" 
+        required>
+      <div *ngIf="timee.invalid && timee.touched">
+        <small *ngIf="timee.errors?.['required']">Le time est obligatoire.</small>
+      </div>
+    </div>
+  
+    <div class="row">
+      <p>Lieu</p>
+      <input 
+        type="text" 
+        [(ngModel)]="lieu" 
+        name="lieu" 
+        #lieuu="ngModel" 
+        required>
+      <div *ngIf="lieuu.invalid && lieuu.touched">
+        <small *ngIf="lieuu.errors?.['required']">Le lieu est obligatoire.</small>
+      </div>
+    </div>
+  
+    <div class="row">
+      <p>Equipe A</p>
+      <select 
+        [(ngModel)]="equipeA" 
+        name="equipeA">
+        <option *ngFor="let item  of equipes" [value]="item">{{ item }}</option>
+      </select>
+    </div>
+  
+    <div class="row">
+      <p>Equipe B</p>
+      <select 
+        [(ngModel)]="equipeB" 
+        name="equipeB">
+        <option *ngFor="let item of equipes" [value]="item">{{ item }}</option>
+      </select>
+    </div>
+  
+    <div class="mb-3">
+      <input 
+        type="submit" 
+        value="Submit" 
+        class="btn btn-primary" 
+        >
+    </div>
+  </form>
+
+  <!--  [disabled]="f.invalid" -->
+  
