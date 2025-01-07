@@ -32,8 +32,8 @@ export class ConsummerService {
     return this.http.get<Match[]>(this.apiUrl2);
   }
 
-  getMatchById(id: number): Observable<Equipe> {
-    return this.http.get<Equipe>(`${this.apiUrl}/${id}`); // Fetch menu by ID
+  getMatchById(id: number): Observable<Match> {
+    return this.http.get<Match>(`${this.apiUrl2}/${id}`); // Fetch menu by ID
   }
 
   updateMatch(menu: Match): Observable<Match> {

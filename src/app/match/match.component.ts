@@ -18,6 +18,8 @@ equipeA!:String
 equipeB!:String
 equipeAa!:Equipe
 equipeBb!:Equipe
+dateeroor=false
+equipeerror=false
 constructor(private cons:ConsummerService){}
 
 equipes:String[]=[];
@@ -31,14 +33,16 @@ this.cons.getEquipes().subscribe(data=>{
 
 
 add() {
+  this.equipeerror=false
+  this.dateeroor=false
   console.log(this.equipeA)
   const newdate=new Date();
-  if(this.date < newdate){
-    alert("date error")
+  if(this.checkDate()){
+    this.dateeroor=true
     return;
   }
   if(this.equipeA==this.equipeB){
-    alert("il faut choisir 2 equipe different")
+    this.equipeerror=true
     return;
   }
 
@@ -65,10 +69,19 @@ add() {
 
   this.cons.add("",newMatch).subscribe()
 
-  });
+  }); 
+  
+  
+}
 
- 
-  
-  
+checkDate():boolean {
+  if (this.date) {
+    const selectedDate = new Date(this.date);
+    const today = new Date();
+    today.setHours(0, 0, 0, 0); // Set time to midnight for accurate comparison
+    return  selectedDate < today;
+  } else {
+     return false;
+  }
 }
 }

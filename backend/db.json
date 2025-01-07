@@ -17,7 +17,7 @@
     },
     {
       "id": "4",
-      "nom": "Equipe 4",
+      "nom": "Equipe 5",
       "natif": "Junior"
     }
   ],
@@ -27,6 +27,26 @@
       "date": "2025-01-09",
       "heure": "10:15",
       "lieu": "tunis",
+      "equipeA": {
+        "id": "1",
+        "nom": "Equipe 1",
+        "natif": "Senior"
+      },
+      "equipeB": {
+        "id": "1",
+        "nom": "Equipe 1",
+        "natif": "Senior"
+      },
+      "score": {
+        "equipeA": 11,
+        "equipeB": 12
+      }
+    },
+    {
+      "id": "2",
+      "date": "2025-01-10",
+      "heure": "11:12",
+      "lieu": "qriqnq",
       "equipeA": {
         "id": "1",
         "nom": "Equipe 1",

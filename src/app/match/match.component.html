@@ -10,6 +10,9 @@
       <div *ngIf="datee.invalid && datee.touched">
         <small *ngIf="datee.errors?.['required']">Le date est obligatoire.</small>
       </div>
+      <div *ngIf="dateeroor">
+        <small >il faut choisir date superieur a aujourdui</small>
+      </div>
     </div>
   
     <div class="row">
@@ -55,15 +58,19 @@
         <option *ngFor="let item of equipes" [value]="item">{{ item }}</option>
       </select>
     </div>
+    <div *ngIf="equipeerror">
+      <small >il faut choisir 2 equipe different</small>
+    </div>
   
     <div class="mb-3">
       <input 
         type="submit" 
+        [disabled]="f.invalid"
         value="Submit" 
         class="btn btn-primary" 
         >
     </div>
   </form>
 
-  <!--  [disabled]="f.invalid" -->
+ 
   
